@@ -8,6 +8,15 @@ function ItemRepo({repo, handleRemoveRepo}) {
     handleRemoveRepo(repo.id)
   }
 
+  const ItemRepo = ({ repo, handleRemoveRepo }) => {
+    return (
+      <div>
+        <h3>{repo.name}</h3>
+        <button onClick={() => handleRemoveRepo(repo.id)}>Excluir</button>
+      </div>
+    )
+  }
+  
   return (
     <ItemContainer onClick={handleRemove}>
         <h3>{repo.name}</h3>
